@@ -5,7 +5,7 @@ const index = ({ games }) => {
   return (
     <div className="text-green-600">
       {games.map((g) => (
-        <p>{g.title}</p>
+        <p key={g.id}>{g.title}</p>
       ))}
       {/* HEADER */}
       {/* CAROUSEL */}
