@@ -1,13 +1,14 @@
 import React from "react";
 import dotenv from "dotenv/config";
+import Header from "../components/Header";
+import Carousel from "../components/Carousel";
 import GameList from "../components/GameList";
 
 const index = ({ games }) => {
   return (
-    <div className="text-green-600">
-      {/* HEADER */}
-      {/* CAROUSEL */}
-
+    <div>
+      <Header />
+      <Carousel />
       <GameList games={games} />
     </div>
   );
