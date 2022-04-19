@@ -1,15 +1,14 @@
 import React from "react";
 import dotenv from "dotenv/config";
+import GameList from "../components/GameList";
 
 const index = ({ games }) => {
   return (
     <div className="text-green-600">
-      {games.map((g) => (
-        <p key={g.id}>{g.title}</p>
-      ))}
       {/* HEADER */}
       {/* CAROUSEL */}
-      {/* GAME LIST */}
+
+      <GameList games={games} />
     </div>
   );
 };
