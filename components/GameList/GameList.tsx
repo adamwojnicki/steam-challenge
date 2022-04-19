@@ -1,10 +1,16 @@
 import React from "react";
+import GameItem from "../GameItem";
+
+interface Game {
+  id: string;
+  title: String;
+}
 
 const GameList = ({ games }) => {
   return (
     <div>
-      {games.map((g: { id: string; title: string }) => (
-        <p key={g.id}>{g.title}</p>
+      {games.map((g: Game) => (
+        <GameItem key={g.id} game={g} />
       ))}
     </div>
   );
