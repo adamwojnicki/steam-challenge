@@ -7,7 +7,7 @@ interface Game {
 }
 
 const GameItem = ({ game }: Game) => {
-  return <div>{game.title}</div>;
+  return <div className="rounded">{game.title}</div>;
 };
 
 export default GameItem;

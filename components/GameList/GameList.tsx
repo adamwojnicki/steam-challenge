@@ -9,12 +9,12 @@ interface Game {
 
 const GameList = ({ games }) => {
   return (
-    <div>
+    <section className="container py-6">
       <Filters />
       {games.map((g: Game) => (
         <GameItem key={g.id} game={g} />
       ))}
-    </div>
+    </section>
   );
 };
 
