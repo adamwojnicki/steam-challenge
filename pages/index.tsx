@@ -6,7 +6,7 @@ import GameList from "../components/GameList";
 
 const index = ({ games }) => {
   return (
-    <div>
+    <div className="bg-darkGray text-white">
       <Header />
       <Carousel />
       <GameList games={games} />
