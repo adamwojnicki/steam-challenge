@@ -7,6 +7,7 @@ interface Game {
   title: string;
   image: string;
   tags: string[];
+  price: number;
 }
 
 const GameList = ({ games }) => {

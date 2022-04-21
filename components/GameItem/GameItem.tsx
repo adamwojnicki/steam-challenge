@@ -1,9 +1,10 @@
 import GameTags from "../GameTags";
 interface Game {
   game: {
-    title: String;
+    title: string;
     image: string;
     tags: string[];
+    price: number;
   };
 }
 
@@ -23,7 +24,7 @@ const GameItem = ({ game }: Game) => {
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
-            className="iconify iconify--simple-icons text-darkBlue"
+            className="iconify iconify--simple-icons text-darkBlue hidden md:block"
             width="48"
             height="48"
             preserveAspectRatio="xMidYMid meet"
@@ -35,7 +36,10 @@ const GameItem = ({ game }: Game) => {
             ></path>
           </svg>
         </div>
-        <div className="h-2 bg-darkBlue rounded-full w-48"></div>
+        <div className="h-2 bg-darkBlue rounded-full w-48 mb-4"></div>
+        <div className="text-2xl text-right">
+          {game.price > 0 ? `$${game.price}` : `Free`}
+        </div>
       </div>
     </div>
   );
