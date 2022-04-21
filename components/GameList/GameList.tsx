@@ -4,17 +4,20 @@ import Filters from "../Filters";
 
 interface Game {
   id: string;
-  title: String;
+  title: string;
+  image: string;
+  tags: string[];
+  price: number;
 }
 
 const GameList = ({ games }) => {
   return (
-    <div>
+    <section className="container py-6">
       <Filters />
       {games.map((g: Game) => (
         <GameItem key={g.id} game={g} />
       ))}
-    </div>
+    </section>
   );
 };
 
