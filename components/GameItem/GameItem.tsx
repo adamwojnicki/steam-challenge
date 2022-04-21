@@ -1,9 +1,11 @@
 import GameTags from "../GameTags";
+import GamePlatforms from "../GamePlatforms";
 interface Game {
   game: {
     title: string;
     image: string;
     tags: string[];
+    platforms: string[];
     price: number;
   };
 }
@@ -22,7 +24,7 @@ const GameItem = ({ game }: Game) => {
             </h3>
             <GameTags tags={game.tags} />
           </div>
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             role="img"
@@ -34,7 +36,8 @@ const GameItem = ({ game }: Game) => {
               fill="currentColor"
               d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"
             ></path>
-          </svg>
+          </svg> */}
+          <GamePlatforms platforms={game.platforms} />
         </div>
         <div className="h-2 bg-darkBlue rounded-full w-48 mb-4"></div>
         <div className="flex justify-between items center">
