@@ -1,15 +1,16 @@
-import React from "react";
-import dotenv from "dotenv/config";
-
+import Header from "../components/Header";
+import Carousel from "../components/Carousel";
+import GameList from "../components/GameList";
+import Head from "next/head";
 const index = ({ games }) => {
   return (
-    <div className="text-green-600">
-      {games.map((g) => (
-        <p key={g.id}>{g.title}</p>
-      ))}
-      {/* HEADER */}
-      {/* CAROUSEL */}
-      {/* GAME LIST */}
+    <div className="bg-darkGray text-white font-sans">
+      <Head>
+        <title>STAEM Library</title>
+      </Head>
+      <Header />
+      <Carousel />
+      <GameList games={games} />
     </div>
   );
 };
