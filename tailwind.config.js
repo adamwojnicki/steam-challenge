@@ -15,6 +15,9 @@ module.exports = {
         center: true,
         padding: "2rem",
       },
+      fontFamily: {
+        'sans': ['Noto Sans', 'Arial', 'sans-serif'],
+      }
     },
   },
   plugins: [],
