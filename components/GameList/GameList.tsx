@@ -4,7 +4,8 @@ import Filters from "../Filters";
 
 interface Game {
   id: string;
-  title: String;
+  title: string;
+  image: string
 }
 
 const GameList = ({ games }) => {
