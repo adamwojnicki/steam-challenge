@@ -10,13 +10,18 @@ interface Game {
 
 const Carousel = ({ games }) => {
   return (
-    <section className="container py-6">
+    <section className="py-12">
       <Splide
-        className="max-w-4xl mx-auto"
         options={{
           perPage: 1,
           rewind: true,
-          gap: "1rem",
+          type: "loop",
+          padding: "20%",
+          breakpoints: {
+            640: {
+              padding: "1rem",
+            },
+          },
         }}
       >
         {games.map((g: Game) => (
