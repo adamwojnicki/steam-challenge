@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Carousel from "../components/Carousel";
 import GameList from "../components/GameList";
+import supabase from "../supabase/games";
 import Head from "next/head";
 const index = ({ games }) => {
   return (
@@ -10,30 +11,17 @@ const index = ({ games }) => {
       </Head>
       <Header />
       <Carousel games={games.slice(0, 6)} />
-      <GameList games={games} />
+      <GameList data={games} />
     </div>
   );
 };
 
 export async function getStaticProps() {
-  const apikey = process.env.API_KEY;
-  const Authorization = process.env.AUTH_KEY;
-  const res = await fetch(
-    "https://gqkuommdmfzmwkzdewma.supabase.co/rest/v1/steam?select=*&range=3,20",
-    {
-      headers: {
-        apikey,
-        Authorization,
-      },
-    }
-  );
-  console.log(res);
-
-  const games = await res.json();
+  const { data, error } = await supabase.from("steam").select("*").range(0, 10);
 
   return {
     props: {
-      games,
+      games: data,
     },
   };
 }
