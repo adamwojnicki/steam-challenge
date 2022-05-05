@@ -9,7 +9,7 @@ const index = ({ games }) => {
         <title>STAEM Library</title>
       </Head>
       <Header />
-      <Carousel />
+      <Carousel games={games.slice(0, 6)} />
       <GameList games={games} />
     </div>
   );
