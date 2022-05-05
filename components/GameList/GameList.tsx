@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import GameItem from "../GameItem";
 import Filters from "../Filters";
 

@@ -19,7 +19,7 @@ export async function getStaticProps() {
   const apikey = process.env.API_KEY;
   const Authorization = process.env.AUTH_KEY;
   const res = await fetch(
-    "https://gqkuommdmfzmwkzdewma.supabase.co/rest/v1/steam?select=*",
+    "https://gqkuommdmfzmwkzdewma.supabase.co/rest/v1/steam?select=*&range=3,20",
     {
       headers: {
         apikey,
@@ -27,6 +27,8 @@ export async function getStaticProps() {
       },
     }
   );
+  console.log(res);
+
   const games = await res.json();
 
   return {
