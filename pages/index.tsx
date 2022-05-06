@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 import GameList from "../components/GameList";
 import supabase from "../supabase/games";
 import Head from "next/head";
+
 const index = ({ games }) => {
   return (
     <div className="bg-darkGray text-white font-sans">

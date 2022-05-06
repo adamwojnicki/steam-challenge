@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import supabase from "../../supabase/games";
-
 import GameItem from "../GameItem";
 import Filters from "../Filters";
 

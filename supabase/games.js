@@ -1,13 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
-
-const apikey = process.env.API_KEY;
-const Authorization = process.env.AUTH_KEY;
 export default createClient(
-  "https://gqkuommdmfzmwkzdewma.supabase.co",
-  apikey,
+  process.env.NEXT_PUBLIC_API_URL,
+  process.env.NEXT_PUBLIC_API_KEY,
   {
     headers: {
-      Authorization,
+      Authorization: process.env.NEXT_PUBLIC_AUTH_KEY,
     },
   }
 );
